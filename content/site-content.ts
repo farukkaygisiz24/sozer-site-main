@@ -59,7 +59,7 @@ export const heroCardSlides = [
 
 // Kurumsal istatistikler — hakkımızda metninden alınmıştır.
 export const stats = [
-  { value: "2008", label: "Kuruluş yılı" },
+  { value: "2019", label: "Kuruluş yılı" },
   { value: "Türkiye Geneli", label: "Hizmet ağı" },
   { value: "3", label: "Stratejik Lokasyon" },
   { value: "6", label: "Yerleşik Operasyon Bölgesi" },
@@ -156,7 +156,7 @@ export const nav: NavItem[] = [
 export const headerNav = nav.filter((item) => !("href" in item) || item.href !== "/iletisim");
 
 export const servicesSlogan =
-  "2008 yılından bu yana, uzman YGM kadromuzla tespit süreçlerinizi mevzuata tam uyumlu, hızlı ve şeffaf bir şekilde yönetiyoruz.";
+  "2019 yılından bu yana, uzman YGM kadromuzla tespit süreçlerinizi mevzuata tam uyumlu, hızlı ve şeffaf bir şekilde yönetiyoruz.";
 
 export const faqIntro =
   "Yetkilendirilmiş Gümrük Müşavirliği (YGM) uygulamaları, yasal sorumluluklar ve denetim süreçleri hakkında en çok merak edilen konuları ve mevzuatsal detayları sizler için derledik.";
@@ -185,7 +185,7 @@ export const faq = [
 ];
 
 export const about = [
-  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., Yetkilendirilmiş Gümrük Müşavirliği uygulamasının hayata geçirildiği 2008 yılından bu yana faaliyetlerini kesintisiz olarak sürdürmektedir. Anonim şirket yapısıyla faaliyet gösteren şirketimiz, Ticaret Bakanlığı tarafından verilen görev ve yetkileri 4458 sayılı Gümrük Kanunu ve ilgili mevzuat hükümleri doğrultusunda bağımsızlık, tarafsızlık ve güvenilirlik ilkeleri çerçevesinde yerine getirmektedir.",
+  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., 2019 yılından bu yana faaliyetlerini kesintisiz olarak sürdürmektedir. Anonim şirket yapısıyla faaliyet gösteren şirketimiz, Ticaret Bakanlığı tarafından verilen görev ve yetkileri 4458 sayılı Gümrük Kanunu ve ilgili mevzuat hükümleri doğrultusunda bağımsızlık, tarafsızlık ve güvenilirlik ilkeleri çerçevesinde yerine getirmektedir.",
 ];
 
 export type AboutSubsection = {
@@ -278,7 +278,7 @@ export const aboutPage = {
 };
 
 export const aboutHomeSummary =
-  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., 2008 yılından bu yana 4458 sayılı Gümrük Kanunu ve ilgili mevzuat çerçevesinde Yetkilendirilmiş Gümrük Müşavirliği hizmetleri sunmaktadır. Bağımsızlık, tarafsızlık, şeffaflık ve mevzuata tam uyum ilkeleri doğrultusunda faaliyet gösteren şirketimiz; güçlü teknolojik altyapısı, deneyimli kadrosu ve kurumsal yaklaşımıyla denetim, tespit ve raporlama süreçlerini güvenilir ve etkin bir anlayışla yürütmektedir. İstanbul merkez ofisimiz ile Bursa ve İzmir ofisimiz aracılığıyla Türkiye genelinde hizmet sunarak dış ticaret süreçlerinin güvenilir ve mevzuata uygun şekilde yürütülmesine katkı sağlamaktayız.";
+  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., 2019 yılından bu yana 4458 sayılı Gümrük Kanunu ve ilgili mevzuat çerçevesinde Yetkilendirilmiş Gümrük Müşavirliği hizmetleri sunmaktadır. Bağımsızlık, tarafsızlık, şeffaflık ve mevzuata tam uyum ilkeleri doğrultusunda faaliyet gösteren şirketimiz; güçlü teknolojik altyapısı, deneyimli kadrosu ve kurumsal yaklaşımıyla denetim, tespit ve raporlama süreçlerini güvenilir ve etkin bir anlayışla yürütmektedir. İstanbul merkez ofisimiz ile Bursa ve İzmir ofisimiz aracılığıyla Türkiye genelinde hizmet sunarak dış ticaret süreçlerinin güvenilir ve mevzuata uygun şekilde yürütülmesine katkı sağlamaktayız.";
 
 export const contact = {
   phone: "+90 216 317 11 44",

@@ -16,7 +16,7 @@ export default function HakkimizdaPage() {
           { label: "Hakkımızda" },
         ]}
         title="Hakkımızda"
-        subtitle="2008'den bu yana bağımsızlık, tarafsızlık ve güvenilirlik ilkeleriyle hizmet veriyoruz."
+        subtitle="2019'dan bu yana bağımsızlık, tarafsızlık ve güvenilirlik ilkeleriyle hizmet veriyoruz."
       />
       <AboutPageContent />
     </>

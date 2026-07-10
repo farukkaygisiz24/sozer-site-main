@@ -47,7 +47,7 @@ export default function AboutPageContent() {
                 </span>
                 <div className="relative z-[2]">
                   <p className="m-0 text-[11px] font-extrabold tracking-[.18em] text-[#7ec4e8] uppercase">
-                    2008&apos;den bu yana
+                    2019&apos;den bu yana
                   </p>
                   <p className="m-0 mt-2 text-[18px] font-extrabold leading-[1.35] text-white">
                     Türkiye genelinde{" "}
