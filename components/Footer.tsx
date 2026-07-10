@@ -19,6 +19,9 @@ const CORPORATE_LINKS = [
 const footerLink =
   "text-[13px] font-medium text-white/60 no-underline transition-colors duration-150 hover:text-white";
 
+const footerContactLink =
+  "text-[12.5px] font-medium leading-[1.55] text-white/70 no-underline transition-colors hover:text-white";
+
 function FooterColumn({
   title,
   children,
@@ -97,25 +100,12 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="İletişim">
-            <div className="flex flex-col gap-3 text-[13px] font-medium">
-              <div>
-                <a
-                  href={merkez.phoneHref ?? contact.phoneHref}
-                  className="text-white/70 no-underline transition-colors hover:text-white"
-                >
-                  <span className="text-[10.5px] font-bold tracking-[.06em] text-white/40 uppercase">
-                    {merkez.label} ·{" "}
-                  </span>
-                  {merkez.phone ?? contact.phone}
-                </a>
-                <p className="m-0 mt-1.5 max-w-[260px] text-[11.5px] leading-[1.55] font-normal text-white/50">
-                  {merkez.value}
-                </p>
-              </div>
-              <a
-                href={`mailto:${contact.email}`}
-                className="text-white/70 no-underline transition-colors hover:text-white"
-              >
+            <div className="flex max-w-[260px] flex-col gap-3 text-[12.5px] leading-[1.55] font-medium">
+              <p className="m-0 font-normal text-white/70">{merkez.value}</p>
+              <a href={merkez.phoneHref ?? contact.phoneHref} className={footerContactLink}>
+                {merkez.phone ?? contact.phone}
+              </a>
+              <a href={`mailto:${contact.email}`} className={footerContactLink}>
                 {contact.email}
               </a>
             </div>

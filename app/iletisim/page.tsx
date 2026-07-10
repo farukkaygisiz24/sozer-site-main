@@ -141,6 +141,8 @@ function OfficeBox({
             className="h-full min-h-[280px] w-full rounded-xl border border-brand-line bg-white"
             style={{ border: 0 }}
             loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
             title={`${address.label} — SÖZER YGM`}
           />
         </div>

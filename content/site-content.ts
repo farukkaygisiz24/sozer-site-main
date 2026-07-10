@@ -294,7 +294,7 @@ export const contact = {
       value:
         "Fetih Mah. Tahralı Sk. Kavakyeli Apt. A Blok No:7 / 14, 34704 Ataşehir/İstanbul",
       mapEmbedUrl:
-        "https://maps.google.com/maps?q=41.001409,29.073317&hl=tr&z=17&output=embed",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d645.4104576852721!2d29.07494013174642!3d41.00125931777042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7d93f1ceaaf%3A0xb7bc93f9ba32606b!2sKavakyeli%20%C4%B0%C5%9F%20Merkezi!5e0!3m2!1str!2sus!4v1783678592061!5m2!1str!2sus",
     },
     {
       label: "Bursa Ofis",
