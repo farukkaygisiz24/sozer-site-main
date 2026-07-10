@@ -95,7 +95,7 @@ export default function HomeCorporateBand() {
                   ))}
                 </div>
 
-                <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-2.5">
                   {LOCATIONS.map((location) => (
                     <span
                       key={location}
