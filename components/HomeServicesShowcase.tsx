@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import ServiceIcon from "@/components/ServiceIcon";
+import DarkGradientWatermark from "@/components/ui/DarkGradientWatermark";
 import TriangleIcon from "@/components/ui/TriangleIcon";
 import ViewUp from "@/components/ui/ViewUp";
 import type { ServiceItem } from "@/content/site-content";
@@ -63,34 +63,28 @@ function CategoryIntroCard({
   href: string;
 }) {
   return (
-    <div className="relative flex flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[900px]:p-6">
-      <span className="pointer-events-none absolute -right-10 -bottom-12 opacity-[.12]" aria-hidden>
-        <Image
-          src="/images/brand/sozer-mark.png"
-          alt=""
-          width={230}
-          height={201}
-          className="h-[201px] w-auto"
-        />
-      </span>
-      <p className="m-0 text-[11.5px] font-extrabold tracking-[.2em] text-[#7ec4e8] uppercase">
-        {kicker}
-      </p>
-      <h3 className="m-0 mt-3.5 text-[26px] leading-[1.25] font-extrabold tracking-[-.015em] text-white">
-        {title}
-      </h3>
-      <p className="m-0 mt-3 text-[14px] leading-[1.7] text-white/75">{description}</p>
-      <div className="mt-auto flex items-center justify-between gap-4 pt-8">
-        <Link
-          href={href}
-          className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-[11px] text-[13.5px] font-extrabold text-[#043848] transition-transform duration-200 hover:-translate-y-0.5"
-        >
-          Tümünü Gör
-          <TriangleIcon size={8} fill="#056492" className="rotate-90" />
-        </Link>
-        <span className="text-[12.5px] font-extrabold tracking-[.06em] text-white/60 uppercase">
-          {count} hizmet
-        </span>
+    <div className="relative flex min-h-[260px] flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[900px]:min-h-[240px] max-[900px]:p-6">
+      <DarkGradientWatermark variant="card" />
+      <div className="relative z-[2] flex flex-col">
+        <p className="m-0 text-[11.5px] font-extrabold tracking-[.2em] text-[#7ec4e8] uppercase">
+          {kicker}
+        </p>
+        <h3 className="m-0 mt-3.5 text-[26px] leading-[1.25] font-extrabold tracking-[-.015em] text-white">
+          {title}
+        </h3>
+        <p className="m-0 mt-3 text-[14px] leading-[1.7] text-white/75">{description}</p>
+        <div className="mt-auto flex items-center justify-between gap-4 pt-8">
+          <Link
+            href={href}
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-[11px] text-[13.5px] font-extrabold text-[#043848] transition-transform duration-200 hover:-translate-y-0.5"
+          >
+            Tümünü Gör
+            <TriangleIcon size={8} fill="#056492" className="rotate-90" />
+          </Link>
+          <span className="text-[12.5px] font-extrabold tracking-[.06em] text-white/60 uppercase">
+            {count} hizmet
+          </span>
+        </div>
       </div>
     </div>
   );

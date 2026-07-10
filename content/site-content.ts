@@ -1,7 +1,7 @@
 export const siteInfo = {
   name: "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş.",
   shortName: "SÖZER YGM",
-  tagline: "Yetkilendirilmiş Gümrük Müşavirliği A.Ş.",
+  tagline: "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş.",
   description: "Yetkilendirilmiş gümrük müşavirliği ve danışmanlık hizmetleri.",
 };
 
@@ -204,8 +204,8 @@ export const aboutPage = {
     {
       title: "Güçlü Organizasyon Yapısı ve Yaygın Hizmet Ağı",
       paragraphs: [
-        "Merkez ofisimiz İstanbul'da, Bursa Şube Müdürlüğümüz ve İzmir Ofisimiz ile birlikte faaliyet göstermekteyiz. İstanbul, Kocaeli, Bursa, Balıkesir, Manisa ve İzmir başta olmak üzere hizmet verdiğimiz bölgelerde Yetkilendirilmiş Gümrük Müşavirliği hizmetlerini etkin ve koordineli bir organizasyon yapısıyla sunuyoruz.",
-        "Gelişmiş teknolojik altyapımız ve entegre bilgi sistemlerimiz sayesinde merkez, şube ve ofislerimiz arasında kesintisiz bilgi akışı sağlıyor; denetim, tespit ve raporlama faaliyetlerini mevzuata uygun, güvenilir ve etkin bir anlayışla yürütüyoruz.",
+        "Merkez ofisimiz İstanbul'da; Bursa ve İzmir ofisimiz ile birlikte faaliyet göstermekteyiz. İstanbul, Kocaeli, Bursa, Balıkesir, Manisa ve İzmir başta olmak üzere hizmet verdiğimiz bölgelerde Yetkilendirilmiş Gümrük Müşavirliği hizmetlerini etkin ve koordineli bir organizasyon yapısıyla sunuyoruz.",
+        "Gelişmiş teknolojik altyapımız ve entegre bilgi sistemlerimiz sayesinde merkez ve ofislerimiz arasında kesintisiz bilgi akışı sağlıyor; denetim, tespit ve raporlama faaliyetlerini mevzuata uygun, güvenilir ve etkin bir anlayışla yürütüyoruz.",
       ],
     },
     {
@@ -278,26 +278,26 @@ export const aboutPage = {
 };
 
 export const aboutHomeSummary =
-  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., 2008 yılından bu yana 4458 sayılı Gümrük Kanunu ve ilgili mevzuat çerçevesinde Yetkilendirilmiş Gümrük Müşavirliği hizmetleri sunmaktadır. Bağımsızlık, tarafsızlık, şeffaflık ve mevzuata tam uyum ilkeleri doğrultusunda faaliyet gösteren şirketimiz; güçlü teknolojik altyapısı, deneyimli kadrosu ve kurumsal yaklaşımıyla denetim, tespit ve raporlama süreçlerini güvenilir ve etkin bir anlayışla yürütmektedir. İstanbul merkez ofisimiz, Bursa Şube Müdürlüğümüz ve İzmir Ofisimiz ile Türkiye genelinde hizmet sunarak dış ticaret süreçlerinin güvenilir ve mevzuata uygun şekilde yürütülmesine katkı sağlamaktayız.";
+  "SÖZER Yetkilendirilmiş Gümrük Müşavirliği A.Ş., 2008 yılından bu yana 4458 sayılı Gümrük Kanunu ve ilgili mevzuat çerçevesinde Yetkilendirilmiş Gümrük Müşavirliği hizmetleri sunmaktadır. Bağımsızlık, tarafsızlık, şeffaflık ve mevzuata tam uyum ilkeleri doğrultusunda faaliyet gösteren şirketimiz; güçlü teknolojik altyapısı, deneyimli kadrosu ve kurumsal yaklaşımıyla denetim, tespit ve raporlama süreçlerini güvenilir ve etkin bir anlayışla yürütmektedir. İstanbul merkez ofisimiz ile Bursa ve İzmir ofisimiz aracılığıyla Türkiye genelinde hizmet sunarak dış ticaret süreçlerinin güvenilir ve mevzuata uygun şekilde yürütülmesine katkı sağlamaktayız.";
 
 export const contact = {
-  phone: "+90 216 317 60 20",
-  phoneHref: "tel:02163176020",
+  phone: "+90 216 317 11 44",
+  phoneHref: "tel:02163171144",
   fax: "+90 216 317 11 33",
   faxHref: "tel:02163171133",
   email: "info@sozerygm.com.tr",
   addresses: [
     {
       label: "Merkez",
-      phone: "+90 216 317 60 20",
-      phoneHref: "tel:02163176020",
+      phone: "+90 216 317 11 44",
+      phoneHref: "tel:02163171144",
       value:
-        "Fetih Mah. Tahralı Sk. Kavakyeli İş Merkezi A Blok No:7 / 14 Ataşehir / İSTANBUL",
+        "Fetih Mah. Tahralı Sk. Kavakyeli Apt. A Blok No:7 / 14, 34704 Ataşehir/İstanbul",
       mapEmbedUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.0897511050966!2d29.07331711566177!3d41.00140872779589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf5b9b964299%3A0x3552ddc9bf25ea4a!2zT1JUVU7DhyBZRVRLxLBMRU5ExLBSxLBMTcSwxZ4gR8OcTVLDnEsgTcOcxZ5BVsSwUkzEsMSexLAgQS7Fni4!5e0!3m2!1str!2str!4v1646393249527!5m2!1str!2str",
+        "https://maps.google.com/maps?q=41.001409,29.073317&hl=tr&z=17&output=embed",
     },
     {
-      label: "Şube",
+      label: "Bursa Ofis",
       phone: "+90 224 211 38 65",
       phoneHref: "tel:02242113865",
       fax: "+90 224 211 38 66",

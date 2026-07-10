@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import FaqAccordion from "@/components/FaqAccordion";
+import DarkGradientWatermark from "@/components/ui/DarkGradientWatermark";
 import TriangleIcon from "@/components/ui/TriangleIcon";
 import ViewUp from "@/components/ui/ViewUp";
 import { faqIntro } from "@/content/site-content";
@@ -31,18 +31,10 @@ export default function HomeFaqSection() {
 
         <ViewUp>
           <div className="grid grid-cols-[340px_1fr] items-start gap-5 max-[1080px]:grid-cols-1">
-            <div className="relative flex flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[1080px]:p-6 max-[900px]:static sticky top-[120px]">
-              <span className="pointer-events-none absolute -right-8 -bottom-10 opacity-[.12]" aria-hidden>
-                <Image
-                  src="/images/brand/sozer-mark.png"
-                  alt=""
-                  width={200}
-                  height={175}
-                  className="h-[175px] w-auto"
-                />
-              </span>
+            <div className="relative flex min-h-[260px] flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[900px]:min-h-[240px] max-[1080px]:p-6 max-[900px]:p-6 max-[900px]:static sticky top-[120px]">
+              <DarkGradientWatermark variant="compact" />
 
-              <div className="relative z-[2]">
+              <div className="relative z-[2] max-[900px]:pr-[108px]">
                 <h3 className="m-0 text-[24px] leading-[1.3] font-extrabold tracking-[-.015em] text-white max-[900px]:text-[22px]">
                   YGM süreçleri hakkında{" "}
                   <span className="bg-[linear-gradient(120deg,#7ec4e8,#4fb3e6)] bg-clip-text text-transparent">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TriangleIcon from "@/components/ui/TriangleIcon";
+import { siteInfo } from "@/content/site-content";
 
 const QUICK_LINKS = [
   {
@@ -54,7 +55,7 @@ export default function HomeHero() {
             className="m-0 text-[13px] font-extrabold tracking-[.22em] text-[#056492] uppercase animate-rise-in"
             style={{ animationDelay: "0.06s" }}
           >
-            Yetkilendirilmiş Gümrük Müşavirliği A.Ş.
+            {siteInfo.tagline}
           </p>
 
           <h1 className="m-0 mt-5 text-[58px] leading-[1.08] font-extrabold tracking-[-.025em] text-[#0b2530] max-[1080px]:text-[48px] max-[900px]:text-[36px]">

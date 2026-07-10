@@ -37,7 +37,7 @@ function FooterColumn({
 }
 
 export default function Footer() {
-  const [merkez, sube] = contact.addresses;
+  const [merkez] = contact.addresses;
 
   return (
     <footer className="relative mt-auto overflow-hidden bg-[linear-gradient(180deg,#032836_0%,#043848_55%,#032836_100%)]">
@@ -97,37 +97,27 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="İletişim">
-            <div className="flex flex-col gap-2 text-[13px] font-medium">
-              <a
-                href={merkez.phoneHref ?? contact.phoneHref}
-                className="text-white/70 no-underline transition-colors hover:text-white"
-              >
-                <span className="text-[10.5px] font-bold tracking-[.06em] text-white/40 uppercase">
-                  Merkez ·{" "}
-                </span>
-                {merkez.phone ?? contact.phone}
-              </a>
-              <a
-                href={sube.phoneHref ?? contact.phoneHref}
-                className="text-white/70 no-underline transition-colors hover:text-white"
-              >
-                <span className="text-[10.5px] font-bold tracking-[.06em] text-white/40 uppercase">
-                  Şube ·{" "}
-                </span>
-                {sube.phone ?? contact.phone}
-              </a>
+            <div className="flex flex-col gap-3 text-[13px] font-medium">
+              <div>
+                <a
+                  href={merkez.phoneHref ?? contact.phoneHref}
+                  className="text-white/70 no-underline transition-colors hover:text-white"
+                >
+                  <span className="text-[10.5px] font-bold tracking-[.06em] text-white/40 uppercase">
+                    {merkez.label} ·{" "}
+                  </span>
+                  {merkez.phone ?? contact.phone}
+                </a>
+                <p className="m-0 mt-1.5 max-w-[260px] text-[11.5px] leading-[1.55] font-normal text-white/50">
+                  {merkez.value}
+                </p>
+              </div>
               <a
                 href={`mailto:${contact.email}`}
                 className="text-white/70 no-underline transition-colors hover:text-white"
               >
                 {contact.email}
               </a>
-              <Link
-                href="/iletisim"
-                className="mt-1 text-[12.5px] font-extrabold text-[#7ec4e8] no-underline transition-colors hover:text-white"
-              >
-                Adres bilgileri →
-              </Link>
             </div>
           </FooterColumn>
         </div>

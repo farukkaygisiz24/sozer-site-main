@@ -4,7 +4,7 @@ import TriangleIcon from "@/components/ui/TriangleIcon";
 import ViewUp from "@/components/ui/ViewUp";
 import { aboutPage } from "@/content/site-content";
 
-const LOCATIONS = ["İstanbul Merkez", "Bursa Şube", "İzmir Ofis"];
+const LOCATIONS = ["İstanbul Merkez", "Bursa Ofis", "İzmir Ofis"];
 
 export default function AboutPageContent() {
   return (

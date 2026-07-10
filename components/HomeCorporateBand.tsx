@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TriangleIcon from "@/components/ui/TriangleIcon";
+import DarkGradientWatermark from "@/components/ui/DarkGradientWatermark";
 import ViewUp from "@/components/ui/ViewUp";
 import { aboutHomeSummary } from "@/content/site-content";
 
@@ -23,7 +24,7 @@ const PRINCIPLES = [
   },
 ];
 
-const LOCATIONS = ["İstanbul Merkez", "Bursa Şube", "İzmir Ofis"];
+const LOCATIONS = ["İstanbul Merkez", "Bursa Ofis", "İzmir Ofis"];
 
 export default function HomeCorporateBand() {
   return (
@@ -31,19 +32,7 @@ export default function HomeCorporateBand() {
       <div className="site-container">
         <ViewUp range="entry 0% cover 26%">
           <div className="relative overflow-hidden rounded-[32px] bg-[linear-gradient(150deg,#032836_0%,#043848_48%,#05506a_100%)] px-14 py-16 max-[1080px]:px-9 max-[900px]:rounded-[22px] max-[900px]:px-6 max-[900px]:py-9">
-            {/* Doku */}
-            <div className="pointer-events-none absolute inset-0" aria-hidden>
-              <div className="absolute -top-[160px] -right-[120px] h-[420px] w-[560px] rounded-full bg-[radial-gradient(closest-side,rgba(43,142,194,.22),transparent_70%)]" />
-              <span className="absolute right-[-70px] bottom-[-90px] block rotate-[8deg] opacity-[.08]">
-                <Image
-                  src="/images/brand/sozer-mark.png"
-                  alt=""
-                  width={340}
-                  height={297}
-                  className="h-[297px] w-auto"
-                />
-              </span>
-            </div>
+            <DarkGradientWatermark variant="hero" />
 
             <div className="relative z-[2] grid grid-cols-[1fr_.95fr] items-center gap-16 max-[1080px]:grid-cols-1 max-[1080px]:gap-10">
               {/* Sol — hikâye */}

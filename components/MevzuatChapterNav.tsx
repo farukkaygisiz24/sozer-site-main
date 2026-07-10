@@ -7,7 +7,6 @@ import {
   useRef,
   useState,
   type ReactNode,
-  type RefObject,
 } from "react";
 
 export type MevzuatChapterNavItem = {
@@ -18,27 +17,6 @@ export type MevzuatChapterNavItem = {
 };
 
 const MevzuatScrollSpyContext = createContext<string>("");
-
-function getZoomContext() {
-  const zoomRoot = document.getElementById("site-zoom-root");
-  if (!zoomRoot) {
-    return { zoom: 1, rootLeft: 0, rootTop: 0 };
-  }
-
-  const rect = zoomRoot.getBoundingClientRect();
-  const zoom = parseFloat(zoomRoot.style.zoom) || 1;
-
-  return { zoom, rootLeft: rect.left, rootTop: rect.top };
-}
-
-function viewportToLocal(viewportX: number, viewportY: number) {
-  const { zoom, rootLeft, rootTop } = getZoomContext();
-
-  return {
-    x: (viewportX - rootLeft) / zoom,
-    y: (viewportY - rootTop) / zoom,
-  };
-}
 
 function getPinTop() {
   const headerHeight =
@@ -174,82 +152,9 @@ function scrollNavItemIntoView(nav: HTMLElement, activeId: string) {
   }
 }
 
-function usePinnedSidebar(panelRef: RefObject<HTMLDivElement | null>) {
-  useEffect(() => {
-    const panel = panelRef.current;
-    if (!panel) return;
-
-    const column = panel.parentElement;
-    const container = panel.closest<HTMLElement>(".mevzuat-layout-grid");
-    if (!column || !container) return;
-
-    column.style.position = "relative";
-
-    let frame = 0;
-
-    const update = () => {
-      frame = 0;
-
-      const stickyTop = getPinTop();
-      const panelHeight = panel.offsetHeight;
-      const panelWidth = column.offsetWidth;
-      const columnRect = column.getBoundingClientRect();
-      const containerRect = container.getBoundingClientRect();
-
-      if (columnRect.top >= stickyTop) {
-        panel.style.position = "";
-        panel.style.top = "";
-        panel.style.left = "";
-        panel.style.width = "";
-        return;
-      }
-
-      if (containerRect.bottom <= stickyTop + panelHeight) {
-        panel.style.position = "absolute";
-        panel.style.top = `${column.offsetHeight - panelHeight}px`;
-        panel.style.left = "0";
-        panel.style.width = `${panelWidth}px`;
-        return;
-      }
-
-      const { x: localLeft, y: localTop } = viewportToLocal(columnRect.left, stickyTop);
-      const zoomRoot = document.getElementById("site-zoom-root");
-      const hasZoom = Boolean(zoomRoot?.style.zoom);
-
-      panel.style.position = "fixed";
-      panel.style.top = hasZoom ? `${localTop}px` : `${stickyTop}px`;
-      panel.style.left = hasZoom ? `${localLeft}px` : `${columnRect.left}px`;
-      panel.style.width = `${panelWidth}px`;
-    };
-
-    const scheduleUpdate = () => {
-      if (frame) return;
-      frame = window.requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate);
-
-    return () => {
-      window.removeEventListener("scroll", scheduleUpdate);
-      window.removeEventListener("resize", scheduleUpdate);
-      if (frame) window.cancelAnimationFrame(frame);
-      panel.style.position = "";
-      panel.style.top = "";
-      panel.style.left = "";
-      panel.style.width = "";
-      column.style.position = "";
-    };
-  }, [panelRef]);
-}
-
 export function MevzuatSidebar({ chapters }: { chapters: MevzuatChapterNavItem[] }) {
   const activeId = useActiveChapterId();
   const navRef = useRef<HTMLElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-
-  usePinnedSidebar(panelRef);
 
   useEffect(() => {
     const nav = navRef.current;
@@ -259,10 +164,7 @@ export function MevzuatSidebar({ chapters }: { chapters: MevzuatChapterNavItem[]
 
   return (
     <aside className="relative self-stretch max-[1080px]:hidden">
-      <div
-        ref={panelRef}
-        className="rounded-[20px] border border-[rgba(5,100,146,.10)] bg-white p-5 shadow-[0_6px_20px_rgba(4,56,72,.05)]"
-      >
+      <div className="sticky top-[calc(var(--header-height)+20px)] rounded-[20px] border border-[rgba(5,100,146,.10)] bg-white p-5 shadow-[0_6px_20px_rgba(4,56,72,.05)]">
         <p className="m-0 mb-4 text-[10.5px] font-extrabold tracking-[.16em] text-[#056492] uppercase">
           Bölümler
         </p>

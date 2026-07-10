@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SubPageHero from "@/components/SubPageHero";
-import ViewUp from "@/components/ui/ViewUp";
 import { contact } from "@/content/site-content";
 
 export const metadata: Metadata = {
@@ -151,7 +150,7 @@ function OfficeBox({
 }
 
 export default function IletisimPage() {
-  const [merkez, sube] = contact.addresses;
+  const [merkez] = contact.addresses;
 
   return (
     <>
@@ -161,17 +160,11 @@ export default function IletisimPage() {
           { label: "İletişim" },
         ]}
         title="İletişim"
-        subtitle="İstanbul merkez ofisimiz ve Bursa şube müdürlüğümüz ile hizmetinizdeyiz."
+        subtitle="İstanbul merkez ofisimiz ile Bursa ve İzmir ofisimiz aracılığıyla hizmetinizdeyiz."
       />
       <section className="bg-white py-16 pb-24">
         <div className="site-container">
           <OfficeBox title="İstanbul Merkez" address={merkez} />
-
-          <div className="my-7 border-t border-brand-line" aria-hidden />
-
-          <ViewUp className="block" range="entry 0% cover 22%">
-            <OfficeBox title="Bursa Şube" address={sube} />
-          </ViewUp>
         </div>
       </section>
     </>
