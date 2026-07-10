@@ -48,17 +48,17 @@ export default function HomeHero() {
         </span>
       </div>
 
-      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+64px)] pb-20 max-[900px]:pb-12">
+      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+64px)] pb-20 max-[900px]:pb-12 [@media(min-width:1280px)_and_(max-height:1080px)]:pt-[calc(var(--header-height)+2rem)] [@media(min-width:1280px)_and_(max-height:1080px)]:pb-10">
         {/* Ortalanmış metin bloğu */}
         <div className="mx-auto max-w-[780px] text-center">
           <p
-            className="m-0 text-[13px] font-extrabold tracking-[.22em] text-[#056492] uppercase animate-rise-in"
+            className="m-0 text-[13px] font-extrabold tracking-[.22em] text-[#056492] uppercase animate-rise-in [@media(min-width:1280px)_and_(max-height:1080px)]:text-[11.5px] [@media(min-width:1280px)_and_(max-height:1080px)]:tracking-[.18em]"
             style={{ animationDelay: "0.06s" }}
           >
             {siteInfo.tagline}
           </p>
 
-          <h1 className="m-0 mt-5 text-[58px] leading-[1.08] font-extrabold tracking-[-.025em] text-[#0b2530] max-[1080px]:text-[48px] max-[900px]:text-[36px]">
+          <h1 className="m-0 mt-5 text-[58px] leading-[1.08] font-extrabold tracking-[-.025em] text-[#0b2530] max-[1080px]:text-[48px] max-[900px]:text-[36px] [@media(min-width:1280px)_and_(max-height:1080px)]:mt-3 [@media(min-width:1280px)_and_(max-height:1080px)]:text-[44px]">
             <span className="block overflow-hidden pb-[.08em] mb-[-.08em]">
               <span className="inline-block animate-word-in" style={{ animationDelay: "0.16s" }}>
                 Tespitten raporlamaya,
@@ -78,7 +78,7 @@ export default function HomeHero() {
           </h1>
 
           <p
-            className="mx-auto mt-6 max-w-[560px] text-[16.5px] leading-[1.75] text-[#4d5a63] animate-rise-in"
+            className="mx-auto mt-6 max-w-[560px] text-[16.5px] leading-[1.75] text-[#4d5a63] animate-rise-in [@media(min-width:1280px)_and_(max-height:1080px)]:mt-4 [@media(min-width:1280px)_and_(max-height:1080px)]:max-w-[520px] [@media(min-width:1280px)_and_(max-height:1080px)]:text-[15px] [@media(min-width:1280px)_and_(max-height:1080px)]:leading-[1.65]"
             style={{ animationDelay: "0.48s" }}
           >
             Antrepo işlemlerinden sonradan kontrole; dış ticaretinizin her adımını
@@ -86,19 +86,19 @@ export default function HomeHero() {
           </p>
 
           <div
-            className="mt-8 flex flex-wrap items-center justify-center gap-3.5 animate-rise-in"
+            className="mt-8 flex flex-wrap items-center justify-center gap-3.5 animate-rise-in [@media(min-width:1280px)_and_(max-height:1080px)]:mt-5"
             style={{ animationDelay: "0.62s" }}
           >
             <Link
               href="/hizmetler"
-              className="inline-flex items-center gap-2.5 rounded-full bg-[linear-gradient(135deg,#056492,#043848)] px-8 py-[15px] text-[14.5px] font-extrabold text-white shadow-[0_10px_28px_rgba(5,100,146,.35)] transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(5,100,146,.45)]"
+              className="inline-flex items-center gap-2.5 rounded-full bg-[linear-gradient(135deg,#056492,#043848)] px-8 py-[15px] text-[14.5px] font-extrabold text-white shadow-[0_10px_28px_rgba(5,100,146,.35)] transition-[box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(5,100,146,.45)] [@media(min-width:1280px)_and_(max-height:1080px)]:px-7 [@media(min-width:1280px)_and_(max-height:1080px)]:py-3"
             >
               Hizmetlerimizi Keşfedin
               <TriangleIcon size={9} fill="#7ec4e8" className="rotate-90" />
             </Link>
             <Link
               href="/iletisim"
-              className="inline-flex items-center rounded-full border-[1.5px] border-[rgba(5,100,146,.28)] bg-white/70 px-8 py-[15px] text-[14.5px] font-extrabold text-[#056492] backdrop-blur-sm transition-colors duration-200 hover:border-[#056492] hover:bg-[#f2f8fb]"
+              className="inline-flex items-center rounded-full border-[1.5px] border-[rgba(5,100,146,.28)] bg-white/70 px-8 py-[15px] text-[14.5px] font-extrabold text-[#056492] backdrop-blur-sm transition-colors duration-200 hover:border-[#056492] hover:bg-[#f2f8fb] [@media(min-width:1280px)_and_(max-height:1080px)]:px-7 [@media(min-width:1280px)_and_(max-height:1080px)]:py-3"
             >
               Bize Ulaşın
             </Link>
@@ -106,8 +106,8 @@ export default function HomeHero() {
         </div>
 
         {/* Panorama görsel + cam hızlı erişim barı */}
-        <div className="relative mt-14 animate-rise-in max-[900px]:mt-9" style={{ animationDelay: "0.78s" }}>
-          <div className="relative aspect-[16/6.4] overflow-hidden rounded-[32px] shadow-[0_36px_80px_rgba(4,56,72,.24)] max-[900px]:aspect-[4/3] max-[900px]:rounded-[20px]">
+        <div className="relative mt-14 animate-rise-in max-[900px]:mt-9 [@media(min-width:1280px)_and_(max-height:1080px)]:mt-7" style={{ animationDelay: "0.78s" }}>
+          <div className="relative aspect-[16/6.4] overflow-hidden rounded-[32px] shadow-[0_36px_80px_rgba(4,56,72,.24)] max-[900px]:aspect-[4/3] max-[900px]:rounded-[20px] [@media(min-width:1280px)_and_(max-height:1080px)]:aspect-[16/5.2] [@media(min-width:1280px)_and_(max-height:1080px)]:rounded-[26px]">
             <Image
               src="/images/hero/bg-02-lojistik-merkezi.jpg"
               alt="SÖZER YGM antrepo ve lojistik denetim operasyonları"
@@ -133,18 +133,18 @@ export default function HomeHero() {
           </div>
 
           {/* Cam hızlı erişim barı */}
-          <div className="absolute right-6 -bottom-9 left-6 grid grid-cols-3 gap-3 max-[900px]:static max-[900px]:mt-4 max-[900px]:grid-cols-1 max-[900px]:gap-2.5">
+          <div className="absolute right-6 -bottom-9 left-6 grid grid-cols-3 gap-3 max-[900px]:static max-[900px]:mt-4 max-[900px]:grid-cols-1 max-[900px]:gap-2.5 [@media(min-width:1280px)_and_(max-height:1080px)]:-bottom-7 [@media(min-width:1280px)_and_(max-height:1080px)]:gap-2.5">
             {QUICK_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="group flex items-center justify-between gap-4 rounded-[18px] border border-white/60 bg-white/85 px-6 py-5 shadow-[0_18px_44px_rgba(4,56,72,.14)] backdrop-blur-[16px] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_24px_52px_rgba(4,56,72,.2)] max-[1080px]:px-5 max-[900px]:py-4"
+                className="group flex items-center justify-between gap-4 rounded-[18px] border border-white/60 bg-white/85 px-6 py-5 shadow-[0_18px_44px_rgba(4,56,72,.14)] backdrop-blur-[16px] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_24px_52px_rgba(4,56,72,.2)] max-[1080px]:px-5 max-[900px]:py-4 [@media(min-width:1280px)_and_(max-height:1080px)]:px-5 [@media(min-width:1280px)_and_(max-height:1080px)]:py-3.5"
               >
                 <span>
-                  <span className="block text-[15px] font-extrabold text-[#0b2530]">
+                  <span className="block text-[15px] font-extrabold text-[#0b2530] [@media(min-width:1280px)_and_(max-height:1080px)]:text-[14px]">
                     {link.title}
                   </span>
-                  <span className="mt-1 block text-[12.5px] leading-snug font-semibold text-[#5c6b74]">
+                  <span className="mt-1 block text-[12.5px] leading-snug font-semibold text-[#5c6b74] [@media(min-width:1280px)_and_(max-height:1080px)]:text-[11.5px]">
                     {link.description}
                   </span>
                 </span>
@@ -170,7 +170,7 @@ export default function HomeHero() {
         </div>
 
         {/* Barın taşma payı */}
-        <div className="h-9 max-[900px]:hidden" aria-hidden />
+        <div className="h-9 max-[900px]:hidden [@media(min-width:1280px)_and_(max-height:1080px)]:h-6" aria-hidden />
       </div>
     </section>
   );
