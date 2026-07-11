@@ -26,10 +26,13 @@ export function slugifyService(title: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-function withSlugs(
-  items: Omit<ServiceItem, "slug">[],
-): ServiceItem[] {
-  return items.map((item) => ({ ...item, slug: slugifyService(item.title) }));
+type ServiceCatalogItem = Omit<ServiceItem, "slug"> & { slug?: string };
+
+function withSlugs(items: ServiceCatalogItem[]): ServiceItem[] {
+  return items.map(({ slug, ...item }) => ({
+    ...item,
+    slug: slug ?? slugifyService(item.title),
+  }));
 }
 
 /** Yerel hizmet görselleri */
@@ -52,7 +55,7 @@ const U = {
 } as const;
 
 /** SÖZER hizmet kataloğu */
-const serviceCatalog: Omit<ServiceItem, "slug">[] = [
+const serviceCatalog: ServiceCatalogItem[] = [
   // —— Gümrük Hizmetleri ——
   {
     icon: "badge",
@@ -113,11 +116,12 @@ const serviceCatalog: Omit<ServiceItem, "slug">[] = [
   {
     icon: "warehouse",
     category: "gumruk",
-    carouselTitle: "Antrepo Tespit İşlemleri (AN1 – AN8)",
-    title: "Antrepo Tespit İşlemleri (AN1 – AN8)",
+    slug: "antrepo-tespit-islemleri-an1-an8",
+    carouselTitle: "Antrepo Tespit İşlemleri (AN1 – AN9)",
+    title: "Antrepo Tespit İşlemleri (AN1 – AN9)",
     image: U.antrepoTespit,
     description:
-      "Gümrük antrepolarının açılış, genişletme, daraltma, devir ve adres değişikliği işlemleri ile antrepolara eşya giriş-çıkış süreçlerinin mevzuata uygunluğunu tespit ediyor ve raporlarını eksiksiz tanzim ediyoruz.",
+      "Gümrük antrepolarının açılış, genişletme, daraltma, devir ve adres değişikliği işlemleri ile antrepolara eşya giriş-çıkış ve elleçleme süreçlerinin mevzuata uygunluğunu tespit ediyor ve raporlarını eksiksiz tanzim ediyoruz.",
   },
   {
     icon: "truck",
