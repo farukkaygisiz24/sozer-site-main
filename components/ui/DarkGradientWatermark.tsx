@@ -76,7 +76,7 @@ function WatermarkMark({
         alt=""
         width={width}
         height={height}
-        className={`${imageClass} w-auto`}
+        className={`${imageClass} w-auto brightness-0 invert`}
       />
     </span>
   );

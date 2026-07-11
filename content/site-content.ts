@@ -98,10 +98,10 @@ export function getServiceCategory(slug: string): ServiceCategory | undefined {
   return serviceCategories.find((category) => category.slug === slug);
 }
 
-export { services, getServicesByCategory, homepageCarouselServices, getServiceHref, getYgmFeaturedServices, getYgmFeaturedHref } from "@/content/services";
+export { services, getServicesByCategory, homepageCarouselServices, getServiceHref, getYgmFeaturedServices, getYgmFeaturedHref, getYgmPageServices } from "@/content/services";
 export type { ServiceItem } from "@/content/services";
 
-import { getServiceHref, getServicesByCategory, getYgmFeaturedServices, getYgmFeaturedHref } from "@/content/services";
+import { getServiceHref, getServicesByCategory, getYgmFeaturedServices, getYgmFeaturedHref, getYgmPageServices } from "@/content/services";
 
 const CATEGORY_HREFS = {
   gumruk: "/hizmetler/ygm",
@@ -137,6 +137,30 @@ export function buildServicesNavGroups(): NavMegaGroup[] {
       title: "Danışmanlık Hizmetleri",
       href: danismanlikHref,
       links: toLinks(getServicesByCategory("danismanlik"), danismanlikHref),
+    },
+  ];
+}
+
+/** Hizmetler sayfası — tüm YGM tespit hizmetleri dahil tam gruplu liste */
+export function buildServicesPageGroups(): NavMegaGroup[] {
+  const danismanlikHref = CATEGORY_HREFS.danismanlik;
+
+  return [
+    {
+      title: serviceCategories.find((c) => c.key === "gumruk")!.title,
+      href: CATEGORY_HREFS.gumruk,
+      links: getYgmPageServices().map((s) => ({
+        label: s.title,
+        href: getYgmFeaturedHref(s),
+      })),
+    },
+    {
+      title: "Danışmanlık Hizmetleri",
+      href: danismanlikHref,
+      links: getServicesByCategory("danismanlik").map((s) => ({
+        label: s.title,
+        href: getServiceHref(danismanlikHref, s.slug),
+      })),
     },
   ];
 }

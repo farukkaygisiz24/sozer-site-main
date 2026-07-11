@@ -48,7 +48,7 @@ export default function HomeHero() {
         </span>
       </div>
 
-      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+64px)] pb-20 max-[900px]:pb-12">
+      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+32px)] pb-14 min-[901px]:flex min-[901px]:min-h-[calc(100svh/var(--site-zoom,1))] min-[901px]:flex-col min-[901px]:pb-10 max-[900px]:pb-12">
         {/* Ortalanmış metin bloğu */}
         <div className="mx-auto max-w-[780px] text-center">
           <p
@@ -58,7 +58,7 @@ export default function HomeHero() {
             {siteInfo.tagline}
           </p>
 
-          <h1 className="m-0 mt-5 text-[58px] leading-[1.08] font-extrabold tracking-[-.025em] text-[#0b2530] max-[1080px]:text-[48px] max-[900px]:text-[36px]">
+          <h1 className="m-0 mt-4 text-[48px] leading-[1.08] font-extrabold tracking-[-.025em] text-[#0b2530] max-[1080px]:text-[42px] max-[900px]:text-[36px]">
             <span className="block overflow-hidden pb-[.08em] mb-[-.08em]">
               <span className="inline-block animate-word-in" style={{ animationDelay: "0.16s" }}>
                 Tespitten raporlamaya,
@@ -78,7 +78,7 @@ export default function HomeHero() {
           </h1>
 
           <p
-            className="mx-auto mt-6 max-w-[560px] text-[16.5px] leading-[1.75] text-[#4d5a63] animate-rise-in"
+            className="mx-auto mt-4 max-w-[660px] text-[15.5px] leading-[1.65] text-[#4d5a63] animate-rise-in"
             style={{ animationDelay: "0.48s" }}
           >
             Antrepo işlemlerinden sonradan kontrole; dış ticaretinizin her adımını
@@ -86,7 +86,7 @@ export default function HomeHero() {
           </p>
 
           <div
-            className="mt-8 flex flex-wrap items-center justify-center gap-3.5 animate-rise-in"
+            className="mt-7 flex flex-wrap items-center justify-center gap-3.5 animate-rise-in"
             style={{ animationDelay: "0.62s" }}
           >
             <Link
@@ -106,8 +106,11 @@ export default function HomeHero() {
         </div>
 
         {/* Panorama görsel + cam hızlı erişim barı */}
-        <div className="relative mt-14 animate-rise-in max-[900px]:mt-9" style={{ animationDelay: "0.78s" }}>
-          <div className="relative aspect-[16/6.4] overflow-hidden rounded-[32px] shadow-[0_36px_80px_rgba(4,56,72,.24)] max-[900px]:aspect-[4/3] max-[900px]:rounded-[20px]">
+        <div
+          className="relative mt-10 animate-rise-in min-[901px]:flex min-[901px]:min-h-0 min-[901px]:flex-1 min-[901px]:flex-col max-[900px]:mt-9"
+          style={{ animationDelay: "0.78s" }}
+        >
+          <div className="relative w-full overflow-hidden rounded-[32px] shadow-[0_36px_80px_rgba(4,56,72,.24)] min-[901px]:min-h-[260px] min-[901px]:flex-1 max-[900px]:aspect-[4/3] max-[900px]:rounded-[20px]">
             <Image
               src="/images/hero/bg-02-lojistik-merkezi.jpg"
               alt="SÖZER YGM antrepo ve lojistik denetim operasyonları"
@@ -117,7 +120,7 @@ export default function HomeHero() {
               className="object-cover"
             />
             <div
-              className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(4,40,54,.55)_0%,rgba(4,40,54,.12)_45%,rgba(4,40,54,.18)_100%)]"
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,rgba(4,40,54,.68)_0%,rgba(4,40,54,.14)_48%,rgba(4,40,54,.18)_100%)]"
               aria-hidden
             />
             {/* Köşe rozeti */}
@@ -132,8 +135,8 @@ export default function HomeHero() {
             </div>
           </div>
 
-          {/* Cam hızlı erişim barı */}
-          <div className="absolute right-6 -bottom-9 left-6 grid grid-cols-3 gap-3 max-[900px]:static max-[900px]:mt-4 max-[900px]:grid-cols-1 max-[900px]:gap-2.5">
+          {/* Cam hızlı erişim barı — görselin içinde */}
+          <div className="absolute right-5 bottom-5 left-5 grid grid-cols-3 gap-3 max-[900px]:static max-[900px]:mt-4 max-[900px]:grid-cols-1 max-[900px]:gap-2.5">
             {QUICK_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -169,8 +172,6 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Barın taşma payı */}
-        <div className="h-9 max-[900px]:hidden" aria-hidden />
       </div>
     </section>
   );

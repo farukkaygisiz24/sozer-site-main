@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import {
   buildServicesNavGroups,
   contact,
+  getYgmPageServices,
   headerNav,
   isMegaMenu,
   isNavGroup,
@@ -69,6 +70,7 @@ function NavItemLink({
 function ServicesMenu({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
   const groups = buildServicesNavGroups();
+  const ygmRemaining = getYgmPageServices().length - (groups[0]?.links.length ?? 0);
   const active =
     isHrefActive(pathname, "/hizmetler") ||
     groups.some(
@@ -131,6 +133,14 @@ function ServicesMenu({ pathname }: { pathname: string }) {
                     {link.label}
                   </Link>
                 ))}
+                {gi === 0 && ygmRemaining > 0 ? (
+                  <Link
+                    href={group.href}
+                    className="-mx-2.5 mt-1 block rounded-[8px] px-2.5 py-[7px] text-[13px] font-extrabold text-brand-blue transition-all hover:translate-x-1 hover:bg-[#f2f8fb]"
+                  >
+                    +{ygmRemaining} hizmet daha →
+                  </Link>
+                ) : null}
               </div>
             ))}
           </div>

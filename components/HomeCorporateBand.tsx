@@ -38,7 +38,7 @@ export default function HomeCorporateBand() {
               {/* Sol — hikâye */}
               <div>
                 <h2 className="m-0 text-[38px] leading-[1.16] font-extrabold tracking-[-.02em] text-white max-[900px]:text-[28px]">
-                  2019&apos;den bu yana{" "}
+                  2019&apos;dan bu yana{" "}
                   <span className="bg-[linear-gradient(120deg,#7ec4e8,#4fb3e6)] bg-clip-text text-transparent">
                     güvenin tarafındayız
                   </span>

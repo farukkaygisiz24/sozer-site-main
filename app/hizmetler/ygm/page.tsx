@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import SubPageHero from "@/components/SubPageHero";
 import ServiceCard from "@/components/ServiceCard";
-import { getServicesByCategory, getYgmFeaturedServices, serviceCategories } from "@/content/site-content";
+import { getYgmPageServices, serviceCategories } from "@/content/site-content";
 
 const category = serviceCategories.find((c) => c.key === "gumruk")!;
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function YgmHizmetleriPage() {
-  const services = getYgmFeaturedServices();
+  const services = getYgmPageServices();
 
   return (
     <>

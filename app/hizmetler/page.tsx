@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SubPageHero from "@/components/SubPageHero";
 import ServicesPageContent from "@/components/ServicesPageContent";
 import {
-  buildServicesNavGroups,
+  buildServicesPageGroups,
   getServicesByCategory,
-  getYgmFeaturedServices,
+  getYgmPageServices,
   serviceCategories,
 } from "@/content/site-content";
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export default function HizmetlerPage() {
-  const navGroups = buildServicesNavGroups();
+  const navGroups = buildServicesPageGroups();
   const totalServices = navGroups.reduce((n, g) => n + g.links.length, 0);
   const gumrukCategory = serviceCategories.find((c) => c.key === "gumruk")!;
   const danismanlikCategory = serviceCategories.find((c) => c.key === "danismanlik")!;
@@ -34,7 +34,7 @@ export default function HizmetlerPage() {
         categories={[
           {
             category: gumrukCategory,
-            count: getYgmFeaturedServices().length,
+            count: getYgmPageServices().length,
             kicker: "Tespit ve Raporlama",
           },
           {

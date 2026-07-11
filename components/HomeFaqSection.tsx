@@ -31,7 +31,7 @@ export default function HomeFaqSection() {
 
         <ViewUp>
           <div className="grid grid-cols-[340px_1fr] items-start gap-5 max-[1080px]:grid-cols-1">
-            <div className="relative flex min-h-[260px] flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[900px]:min-h-[240px] max-[1080px]:p-6 max-[900px]:p-6 max-[900px]:static sticky top-[120px]">
+            <div className="relative flex min-h-[260px] flex-col overflow-hidden rounded-[24px] bg-[linear-gradient(155deg,#043848_0%,#056492_100%)] p-8 max-[900px]:min-h-[240px] max-[1080px]:p-6 max-[900px]:p-6 max-[900px]:relative max-[900px]:top-0 sticky top-[120px]">
               <DarkGradientWatermark variant="compact" />
 
               <div className="relative z-[2] max-[900px]:pr-[108px]">

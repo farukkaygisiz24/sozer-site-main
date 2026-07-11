@@ -9,6 +9,7 @@ import {
   getServicesByCategory,
   getYgmFeaturedHref,
   getYgmFeaturedServices,
+  getYgmPageServices,
   serviceCategories,
   servicesSlogan,
 } from "@/content/site-content";
@@ -90,8 +91,40 @@ function CategoryIntroCard({
   );
 }
 
+function ExploreAllCard({ remaining, href }: { remaining: number; href: string }) {
+  return (
+    <Link
+      href={href}
+      className="group flex flex-col items-center justify-center gap-1.5 rounded-[20px] border-[1.5px] border-dashed border-[rgba(5,100,146,.28)] bg-[#eef6fa] p-6 text-center transition-[transform,border-color,background,box-shadow] duration-200 hover:-translate-y-1 hover:border-solid hover:border-[rgba(5,100,146,.45)] hover:bg-white hover:shadow-[0_20px_44px_rgba(4,56,72,.12)] max-[900px]:p-5"
+    >
+      <span className="text-[34px] leading-none font-extrabold tracking-[-.02em] text-[#056492]">
+        +{remaining}
+      </span>
+      <span className="text-[14px] font-extrabold text-[#0b2530]">hizmet daha</span>
+      <span className="mt-2 flex items-center gap-2 text-[13px] font-extrabold text-[#056492]">
+        Tümünü Keşfet
+        <svg
+          width="13"
+          height="13"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="transition-transform duration-200 group-hover:translate-x-1"
+          aria-hidden
+        >
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </span>
+    </Link>
+  );
+}
+
 export default function HomeServicesShowcase() {
-  const ygmServices = getYgmFeaturedServices();
+  const ygmServices = getYgmFeaturedServices().slice(0, 5);
+  const totalYgmCount = getYgmPageServices().length;
   const danismanlikServices = getServicesByCategory("danismanlik");
   const gumrukCategory = serviceCategories.find((c) => c.key === "gumruk")!;
   const danismanlikCategory = serviceCategories.find((c) => c.key === "danismanlik")!;
@@ -127,13 +160,17 @@ export default function HomeServicesShowcase() {
               kicker="Tespit ve Raporlama"
               title={gumrukCategory.title}
               description={gumrukCategory.description}
-              count={ygmServices.length}
+              count={totalYgmCount}
               href={gumrukCategory.href}
             />
             <div className="grid grid-cols-3 gap-4 max-[1300px]:grid-cols-2 max-[600px]:grid-cols-1">
               {ygmServices.map((service) => (
                 <ServiceCard key={service.slug} service={service} href={getYgmFeaturedHref(service)} />
               ))}
+              <ExploreAllCard
+                remaining={totalYgmCount - ygmServices.length}
+                href={gumrukCategory.href}
+              />
             </div>
           </div>
         </ViewUp>
