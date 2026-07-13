@@ -28,12 +28,10 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col overflow-x-clip font-sans">
         <ViewportZoom />
         <Header />
-        <div id="site-zoom-root" className="flex flex-1 flex-col">
-          <main className="flex-1 overflow-x-clip">
-            <PageTransition>{children}</PageTransition>
-          </main>
-          <Footer />
-        </div>
+        <main className="flex-1 overflow-x-clip">
+          <PageTransition>{children}</PageTransition>
+        </main>
+        <Footer />
       </body>
     </html>
   );

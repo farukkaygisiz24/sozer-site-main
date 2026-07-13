@@ -23,9 +23,9 @@ const QUICK_LINKS = [
 
 export default function HomeHero() {
   return (
-    <section className="relative -mt-[var(--header-height)] overflow-hidden bg-[linear-gradient(180deg,#e9f3f8_0%,#f7fbfd_55%,#ffffff_100%)]">
-      {/* Arka plan dokusu */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
+    <section className="relative z-[1] -mt-[var(--header-height)] overflow-x-clip bg-[linear-gradient(180deg,#e9f3f8_0%,#f7fbfd_55%,#ffffff_100%)]">
+      {/* Arka plan dokusu — overflow burada; foto glow'u alta sızabilsin */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
         <div className="absolute -top-[200px] left-1/2 h-[540px] w-[860px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(5,100,146,.13),transparent_70%)]" />
         <span className="absolute top-[120px] left-[7%] block -rotate-[12deg] max-[900px]:hidden">
           <Image
@@ -48,7 +48,7 @@ export default function HomeHero() {
         </span>
       </div>
 
-      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+32px)] pb-14 min-[901px]:flex min-[901px]:min-h-[calc(100svh/var(--site-zoom,1))] min-[901px]:flex-col min-[901px]:pb-10 max-[900px]:pb-12">
+      <div className="site-container relative z-[2] pt-[calc(var(--header-height)+32px)] pb-14 min-[901px]:flex min-[901px]:min-h-[calc(100svh/var(--site-zoom,1))] min-[901px]:flex-col min-[901px]:pb-14 max-[900px]:pb-12">
         {/* Ortalanmış metin bloğu */}
         <div className="mx-auto max-w-[780px] text-center">
           <p
